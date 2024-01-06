@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>"
+    />
   </head>
   <body>
     <div class="container">
-      <h2>Body Mass Index Calculator</h2>
+      <h2 class="heading">Body Mass Index Calculator</h2>
       <div class="input-container">
         <label
           >Your Height (cm) :
@@ -25,17 +29,18 @@
             placeholder="Enter your weight here.."
           />
         </label>
-        <button class="btn" id="btn">Calculate BMI</button>
+        <button class="rainbow-btn" id="btn"><span>Calculate BMI</span></button>
         <label
           >Your BMI Index :
           <input
-            id="weight"
+            readonly
+            id="bmi"
             type="number"
-            placeholder="Enter your weight here.."
+            placeholder="You'll see BMI here.."
           />
         </label>
       </div>
-      <p>Tip: You are underweight</p>
+      <p class="tip">Tip: <span id="tip">You are underweight</span></p>
     </div>
     <script src="index.js"></script>
   </body>
