@@ -6,8 +6,8 @@ const tip = document.getElementById("tip");
 
 btn.addEventListener("click", () => {
   if (weight.value == "" || height.value == "") {
-    console.log("Please provide some +ve input");
-    tip.innerText = "Please provide some +ve input";
+    console.log("Please atleast provide some input");
+    tip.innerText = "Please atleast provide some input";
   } else if (weight.value <= 0 || height.value <= 0) {
     console.log("Weight or Height should be +ve Number");
     tip.innerText = "Weight or Height should be +ve Number";
