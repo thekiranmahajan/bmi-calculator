@@ -8,8 +8,7 @@ btn.addEventListener("click", () => {
   if (weight.value == "" || height.value == "") {
     console.log("Please provide some +ve input");
     tip.innerText = "Please provide some +ve input";
-  }
-  if (weight.value <= 0 || height.value <= 0) {
+  } else if (weight.value <= 0 || height.value <= 0) {
     console.log("Weight or Height should be +ve Number");
     tip.innerText = "Weight or Height should be +ve Number";
   } else {
@@ -17,9 +16,9 @@ btn.addEventListener("click", () => {
     bmi.value = calculatedBMI.toFixed(2);
     if (calculatedBMI <= 18.4) {
       tip.innerText = "You are Underweight, increase your calories.";
-    } else if (calculatedBMI >= 18.5 || calculatedBMI <= 24.9) {
+    } else if (calculatedBMI >= 18.5 && calculatedBMI <= 24.9) {
       tip.innerText = "You've Normal weight, continue eating healhty";
-    } else if (calculatedBMI >= 25 || calculatedBMI <= 39.9) {
+    } else if (calculatedBMI >= 25 && calculatedBMI <= 39.9) {
       tip.innerText = "You are Overweight, eat less calories.";
     } else {
       tip.innerText = "You've Obesity problem contact physician.";
